@@ -1,0 +1,39 @@
+# CyberSword safe configuration template.
+# Copy to config.yaml or run `python cybersword.py --setup`.
+
+api_keys:
+  virustotal: ""
+  abuseipdb: ""
+  shodan: ""
+  ipinfo: ""
+  haveibeenpwned: ""
+  google_safe_browsing: ""
+  alienvault_otx: ""
+  ipqualityscore: ""
+  numverify: ""
+  abusech: ""
+
+settings:
+  timeout: 15
+  max_redirects: 10
+  user_agent: "CyberSword/1.0 (defensive security analysis)"
+  proxy: ""
+  verify_tls: true
+  verbose: false
+  quiet: false
+  cache_ttl: 3600
+  port_scan_top: 100
+  port_scan_timeout: 0.5
+
+output:
+  log_dir: "logs"
+  report_dir: "reports"
+  # Persistent logs may contain investigation targets and report data.
+  save_logs: false
+  default_format: "rich"
+
+rate_limits:
+  virustotal: 4
+  abuseipdb: 1000
+  shodan: 1
+  ipqualityscore: 200

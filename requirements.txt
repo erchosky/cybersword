@@ -1,0 +1,15 @@
+# CyberSword runtime dependencies (Python 3.12 o superior; recomendado 3.14).
+# Exact versions make a restored archive predictable. See pylock.toml
+# for the complete transitive environment (macOS arm64, Python 3.14).
+cachetools==7.2.0
+dnspython==2.8.0
+exifread==3.5.1
+numpy==2.5.3
+pefile==2024.8.26
+phonenumbers==9.0.40
+pillow==12.3.0
+pycryptodome==3.23.0
+python-whois==0.9.6
+pyyaml==6.0.3
+requests==2.34.2
+rich==15.0.0

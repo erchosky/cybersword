@@ -1,0 +1,3 @@
+# Optional enhanced MIME detection. On macOS install the native library first:
+#   brew install libmagic
+python-magic==0.4.27
