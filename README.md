@@ -1,6 +1,8 @@
 # CyberSword
 
-"Navaja suiza" de ciberseguridad **defensiva** para la terminal. Sirve para investigar cosas sospechosas antes de fiarte de ellas:
+Mi navaja suiza para mirar emails, enlaces, archivos y otras cosas que huelen raro antes de fiarme. CyberSword funciona desde la terminal y junta herramientas de ciberseguridad **defensiva** en un mismo sitio.
+
+Para ese mensaje de «entra aquí urgentemente» que ya viene dando mal rollo, sabeehh. Puedes revisar:
 
 - **Emails** (`.eml` o cabeceras pegadas): SPF, DKIM y DMARC, saltos entre servidores, Reply-To falsos, enlaces, adjuntos y puntuación de phishing.
 - **URLs y dominios**: sigue redirecciones y acortadores hasta el destino real; analiza WHOIS, DNS, certificado TLS, reputación (VirusTotal, Google Safe Browsing, URLhaus, PhishTank) y dominios que imitan marcas (`paypa1.com`, `paypal-secure-login.com`).
@@ -22,7 +24,7 @@
 - Las dos funciones **activas** (escaneo de puertos y escáner web) piden confirmación de autorización antes de ejecutarse. En la línea de comandos, el escaneo de puertos exige además la opción `--scan-ports`. Escanear sistemas ajenos puede estar prohibido por ley o por tu proveedor.
 - Las investigaciones pueden contener datos personales. **No se guardan logs** salvo que actives `output.save_logs`; `logs/`, `reports/`, `config.yaml` y `.env*` están excluidos de Git.
 
-## Instalación paso a paso
+## Cómo arrancarlo
 
 ### 1. Requisitos
 
@@ -33,7 +35,7 @@
 ### 2. Descargar y crear el entorno virtual
 
 ```bash
-git clone <url-del-repositorio> cybersword
+git clone https://github.com/erchosky/cybersword.git cybersword
 cd cybersword
 python3 -m venv .venv
 source .venv/bin/activate          # En Windows: .venv\Scripts\activate
@@ -136,7 +138,7 @@ pip-audit -r requirements.txt
 
 La CI de GitHub Actions ejecuta estas comprobaciones con Python 3.12 y 3.14.
 
-## Limitaciones
+## Hasta dónde puedes fiarte del resultado
 
 - Los resultados de reputación dependen de servicios externos, de sus cuotas y de tus claves.
 - Los límites de peticiones son locales y aproximados; manda el proveedor.
