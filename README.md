@@ -1,6 +1,6 @@
 # CyberSword
 
-Mi navaja suiza para mirar emails, enlaces, archivos y otras cosas que huelen raro antes de fiarme. CyberSword funciona desde la terminal y junta herramientas de ciberseguridad **defensiva** en un mismo sitio.
+Un correo sospechoso, un enlace que huele raro o un archivo que no sabes si abrir: para eso hice **CyberSword**. Es una herramienta de terminal que reúne varias comprobaciones de ciberseguridad defensiva en un mismo sitio.
 
 Para ese mensaje de «entra aquí urgentemente» que ya viene dando mal rollo, sabeehh. Puedes revisar:
 
