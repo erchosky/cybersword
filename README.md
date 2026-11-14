@@ -1,9 +1,14 @@
 # CyberSword
 
-Un correo sospechoso, un enlace que huele raro o un archivo que no sabes si abrir: para eso hice **CyberSword**. Es una herramienta de terminal que reúne varias comprobaciones de ciberseguridad defensiva en un mismo sitio.
+Herramienta de terminal para reunir comprobaciones de ciberseguridad defensiva: correos, enlaces, dominios, archivos e indicadores de amenazas.
 
-Para ese mensaje de «entra aquí urgentemente» que ya viene dando mal rollo, sabeehh. Puedes revisar:
+Permite consultar reputación, analizar señales sospechosas y generar informes. Las funciones activas deben usarse únicamente con autorización.
 
+[Funciones principales](#funciones-principales) · [Uso responsable](#uso-responsable) · [Instalación y arranque](#instalación-y-arranque) · [Estructura](#estructura) · [Desarrollo](#desarrollo) · [Cómo interpretar los resultados](#cómo-interpretar-los-resultados)
+
+---
+
+## Funciones principales
 - **Emails** (`.eml` o cabeceras pegadas): SPF, DKIM y DMARC, saltos entre servidores, Reply-To falsos, enlaces, adjuntos y puntuación de phishing.
 - **URLs y dominios**: sigue redirecciones y acortadores hasta el destino real; analiza WHOIS, DNS, certificado TLS, reputación (VirusTotal, Google Safe Browsing, URLhaus, PhishTank) y dominios que imitan marcas (`paypa1.com`, `paypal-secure-login.com`).
 - **SMS y mensajes**: detecta smishing por urgencia, marcas suplantadas y enlaces acortados.
@@ -24,7 +29,7 @@ Para ese mensaje de «entra aquí urgentemente» que ya viene dando mal rollo, s
 - Las dos funciones **activas** (escaneo de puertos y escáner web) piden confirmación de autorización antes de ejecutarse. En la línea de comandos, el escaneo de puertos exige además la opción `--scan-ports`. Escanear sistemas ajenos puede estar prohibido por ley o por tu proveedor.
 - Las investigaciones pueden contener datos personales. **No se guardan logs** salvo que actives `output.save_logs`; `logs/`, `reports/`, `config.yaml` y `.env*` están excluidos de Git.
 
-## Cómo arrancarlo
+## Instalación y arranque
 
 ### 1. Requisitos
 
@@ -138,7 +143,7 @@ pip-audit -r requirements.txt
 
 La CI de GitHub Actions ejecuta estas comprobaciones con Python 3.12 y 3.14.
 
-## Hasta dónde puedes fiarte del resultado
+## Cómo interpretar los resultados
 
 - Los resultados de reputación dependen de servicios externos, de sus cuotas y de tus claves.
 - Los límites de peticiones son locales y aproximados; manda el proveedor.
